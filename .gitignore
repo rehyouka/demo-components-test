@@ -1,0 +1,13 @@
+### IntelliJ IDEA ###
+.idea/
+target/
+*.iml
+
+### Visual Studio Code ###
+.vscode/
+
+### node.js ###
+node_modules
+
+### vite ###
+dist/

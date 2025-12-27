@@ -1,0 +1,15 @@
+This project includes third-party software under the following licenses:
+
+----------------------------------------------------------------
+
+lit
+BSD 3-Clause License
+Copyright (c) 2017 Google LLC. All rights reserved.
+https://github.com/lit/lit/
+
+----------------------------------------------------------------
+
+heroicons
+MIT License
+Copyright (c) Tailwind Labs, Inc.
+https://github.com/tailwindlabs/heroicons
