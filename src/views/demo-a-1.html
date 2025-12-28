@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-a-1</title>
+
+    <script type="module">
+        import { DemoA } from '../../../demo-components/dist/demo-components.es.js';
+    </script>
+    <style>
+        demo-a[underline][smooth] {
+            color: grey;
+            --a-color-select-x: black;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>default</h2>
+    <demo-a href="https://example.com">default</demo-a>
+    <hr>
+
+    <h2>new-tab</h2>
+    <demo-a href="https://example.com" new-tab>new-tab</demo-a>
+    <hr>
+
+    <h2>underline</h2>
+    <demo-a href="https://example.com" underline>underline</demo-a>
+    <hr>
+
+    <h2>underline smooth (with additional styles)</h2>
+    <demo-a href="https://example.com" underline smooth>underline smooth</demo-a>
+
+</body>
+</html>

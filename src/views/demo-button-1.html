@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-a-1</title>
+
+    <script type="module">
+        import { DemoButton } from '../../../demo-components/dist/demo-components.es.js';
+    </script>
+    <style>
+        demo-button[bordered][rounded][filled] {
+            --btn-color-light-x: #5d65c8;
+            --btn-color-dark-x: #2d2e8a;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>default</h2>
+    <demo-button>default</demo-button>
+    <hr>
+
+    <h2>bordered rounded</h2>
+    <demo-button bordered rounded>bordered rounded</demo-button>
+    <hr>
+
+    <h2>bordering</h2>
+    <demo-button bordering>bordering</demo-button>
+    <hr>
+
+    <h2>bordered rounded filled (with additional styles)</h2>
+    <demo-button bordered rounded filled>bordered rounded filled</demo-button>
+    <hr>
+
+</body>
+</html>

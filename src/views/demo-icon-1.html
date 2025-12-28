@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-a-1</title>
+
+    <script type="module">
+        import { DemoIcon } from '../../../demo-components/dist/demo-components.es.js';
+    </script>
+    <style>
+        demo-icon {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>default</h2>
+    <demo-icon name="arrow-left-circle"></demo-icon>
+    <hr>
+
+    <h2>filled</h2>
+    <demo-icon name="arrow-left-circle" filled></demo-icon>
+    <hr>
+
+    <h2>category</h2>
+    <demo-icon name="github" filled category="brands"></demo-icon>
+    <hr>
+
+
+</body>
+</html>
