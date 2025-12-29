@@ -1,0 +1,27 @@
+[
+  {
+    "copyright": "Copyright © 2025 Xxx Inc. All rights reserved.",
+    "menu": [
+      {
+        "desc": "Support",
+        "link": "https://example.org/"
+      },
+      {
+        "desc": "Privacy",
+        "link": ""
+      },
+      {
+        "desc": "Cookies",
+        "link": ""
+      },
+      {
+        "desc": "Terms of use",
+        "link": ""
+      },
+      {
+        "desc": "License",
+        "link": ""
+      }
+    ]
+  }
+]

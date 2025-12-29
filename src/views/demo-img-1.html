@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-img-1</title>
+
+    <script type="module">
+        import { DemoImg } from '../../../demo-components/dist/demo-components.es.js';
+    </script>
+    <style>
+        demo-img {
+            width: 400px;
+            height: 200px;
+            border-color: red;
+            border-style: solid;
+            border-width: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>default (mode="auto")</h2>
+    <demo-img src="/assets/imgs/office.png" mode="auto"></demo-img>
+    <hr>
+
+    <h2>mode="stretched"</h2>
+    <demo-img src="/assets/imgs/office.png" mode="stretched"></demo-img>
+    <hr>
+
+    <h2>mode="cropped"</h2>
+    <demo-img src="/assets/imgs/office.png" mode="cropped"></demo-img>
+    <hr>
+
+    <h2>filtered (hoverable)</h2>
+    <demo-img src="/assets/imgs/office.png" filtered></demo-img>
+    <hr>
+
+    <h2>invalid img src (default alt)</h2>
+    <demo-img src="/assets/imgs/invalid.png"></demo-img>
+    <hr>
+
+    <h2>invalid img src (custom alt)</h2>
+    <demo-img src="/assets/imgs/invalid.png" alt="this is a custom alt!"></demo-img>
+    <hr>
+
+</body>
+</html>
