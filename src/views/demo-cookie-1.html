@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-cookie-1</title>
+
+    <script type="module">
+        import { DemoCookie } from '../../../demo-components/dist/demo-components.es.js';
+    </script>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 2000px;
+        }
+        demo-cookie {
+            color: white;
+            background-color: black;
+            font-family: sans-serif;
+            font-size: 1rem;
+            --btn-color-dark-x: #5d65c8;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>configure via .json file</h2>
+    <demo-cookie config-name="cookie"></demo-cookie>
+
+</body>
+</html>
