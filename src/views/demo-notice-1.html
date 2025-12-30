@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo-notice-1</title>
+
+    <script type="module">
+        import { DemoNotice } from '../../../demo-components/dist/demo-components.es.js';
+    </script>
+    <style>
+        demo-notice {
+            background-color: #e4c482;
+            font-family: sans-serif;
+            padding: 0.4rem 0;
+            color: #2b2b2b;
+            font-size: 0.8rem;
+            --a-color-select-x: black;
+            letter-spacing: 0.07rem;
+            word-spacing: 0.4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>configure via .json file</h2>
+    <demo-notice config-name="notice"></demo-notice>
+    <hr>
+
+    <h2>slot</h2>
+    <demo-notice>
+        <h2>this message content does not come from .json file but slot label</h2>
+    </demo-notice>
+    <hr>
+
+</body>
+</html>
