@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>demo-signboard-1</title>
 
     <script type="module">
         import { DemoGallery } from '../../../demo-components/dist/demo-components.es.js';
     </script>
-    <style>
-    </style>
+    <link rel="stylesheet" href="../devices.css">
 </head>
 <body>
 
     <h2>default, configure via .json file</h2>
     <demo-gallery 
         config-name="gallery"
-        w="200px"
-        h="100px"
+        w="160px"
+        h="80px"
         gap="20px"
     ></demo-gallery>
     <hr>
@@ -24,8 +24,8 @@
     <h2>playing</h2>
     <demo-gallery 
         config-name="gallery"
-        w="200px"
-        h="100px"
+        w="160px"
+        h="180px"
         gap="20px"
         playing
     ></demo-gallery>

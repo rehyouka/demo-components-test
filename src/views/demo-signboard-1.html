@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>demo-signboard-1</title>
 
     <script type="module">
         import { DemoSignboard } from '../../../demo-components/dist/demo-components.es.js';
     </script>
+    <link rel="stylesheet" href="../devices.css">
     <style>
         demo-signboard {
             --signboard-bg-img-x: linear-gradient(to left top, #d16ba5, #c467ad, #b365b5, #9f64bc, #8764c2, #745cbc, #6055b5, #4a4eaf, #3c3e9c, #2d2e8a, #1c1e78, #070f66);
@@ -15,7 +17,8 @@
             --signboard-color-underline-x: #5d65c8;
 
             margin: 50px auto;
-            width: 1000px;
+            width: 100%;
+            max-width: 1200px;
         }
     </style>
 </head>
