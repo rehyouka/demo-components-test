@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>theme-1</title>
+
+    <link rel="stylesheet" href="../../styles/devices.css">
+    <style>
+        body {
+            --color-bg: white;
+            --color-txt: black;
+        }
+        body.dark {
+            --color-bg: black;
+            --color-txt: white;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-txt);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>click it to toggle theme</h2>
+    <button id="button">TOGGLE</button>
+
+    <script type="module">
+        import { toggleTheme } from '../../../../demo-components/dist/demo-components.es.js';
+        const button = document.getElementById('button');
+        button?.addEventListener('click', e => toggleTheme());
+    </script>
+</body>
+</html>
