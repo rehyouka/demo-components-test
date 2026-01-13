@@ -8,5 +8,5 @@ npm install ; npm run dev
 
 - Product
 ```shell
-caddy run
+npm run build ; caddy run
 ```
