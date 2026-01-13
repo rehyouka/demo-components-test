@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo-a-1</title>
+
+    <script type="module">
+        import { DemoCard } from '../../../../demo-components/dist/demo-components.es.js';
+    </script>
+    <link rel="stylesheet" href="../../styles/devices.css">
+    <style>
+        :root {
+            --card-bg: #ffffff;
+            --card-border: #e5e7eb;
+            --text-main: #111827;
+            --text-sub: #6b7280;
+            --accent: #2563eb;
+            --tag-bg: #eef2ff;
+            --tag-text: #3730a3;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f9fafb;
+            color: var(--text-main);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #e5e7eb;
+            flex-shrink: 0;
+        }
+
+        .header-info h2 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .header-info p {
+            margin: 4px 0 0;
+            color: var(--text-sub);
+            font-size: 14px;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .section-content {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--text-sub);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .tag {
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 12px;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            white-space: nowrap;
+        }
+
+        .footer {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid var(--card-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .location {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        .contact a {
+            font-size: 14px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+
+        demo-card {
+            max-width: 720px;
+            /* margin: 0 auto; */
+            background: var(--card-bg);
+            /* border: 1px solid var(--card-border); */
+            /* border-radius: 12px; */
+            /* padding: 24px; */
+            /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04); */
+        }
+
+        demo-card[shadowed], demo-card[shadowing] {
+            --card-color-shadow-x: rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>default</h2>
+    <demo-card>
+        <!-- Header -->
+        <div class="card-header">
+            <img
+            class="avatar"
+            src="/avatars/engineer.jpeg"
+            alt="个人头像"
+            />
+            <div class="header-info">
+            <h2>前端工程师 · Web / Web Components</h2>
+            <p>5 年经验 · 偏工程化 / 架构设计</p>
+            </div>
+        </div>
+    
+        <!-- Profile -->
+        <div class="section">
+            <div class="section-title">个人简介</div>
+            <div class="section-content">
+            专注于现代前端工程体系，长期使用 Vite、Lit、Web Components
+            构建可维护、低耦合的前端架构。对性能、可维护性和长期演进成本高度敏感，
+            偏好简洁、稳定、可控的技术方案。
+            </div>
+        </div>
+    
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-title">核心技术栈</div>
+            <div class="tags">
+            <span class="tag">JavaScript / TypeScript</span>
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">Lit 3</span>
+            <span class="tag">Web Components</span>
+            <span class="tag">Vite / Rollup</span>
+            <span class="tag">MPA / SPA 架构</span>
+            <span class="tag">前端工程化</span>
+            </div>
+        </div>
+    
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">求职期望</div>
+            <div class="section-content">
+            · 前端工程师 / 高级前端工程师<br />
+            · 偏工程化、组件化、平台型项目<br />
+            · 接受远程或混合办公模式<br />
+            · 注重代码质量与长期维护
+            </div>
+        </div>
+    
+        <!-- Footer -->
+        <div class="footer">
+            <div class="location">
+            📍 深圳 / 远程
+            </div>
+            <div class="contact">
+            <a href="https://example.org/" target="_blank">
+                LinkedIn 联系我 →
+            </a>
+            </div>
+        </div>
+
+    </demo-card>
+    <hr>
+
+    <h2>rounded + clickable</h2>
+    <demo-card rounded clickable>
+        <!-- Header -->
+        <div class="card-header">
+            <img
+            class="avatar"
+            src="/avatars/engineer.jpeg"
+            alt="个人头像"
+            />
+            <div class="header-info">
+            <h2>前端工程师 · Web / Web Components</h2>
+            <p>5 年经验 · 偏工程化 / 架构设计</p>
+            </div>
+        </div>
+    
+        <!-- Profile -->
+        <div class="section">
+            <div class="section-title">个人简介</div>
+            <div class="section-content">
+            专注于现代前端工程体系，长期使用 Vite、Lit、Web Components
+            构建可维护、低耦合的前端架构。对性能、可维护性和长期演进成本高度敏感，
+            偏好简洁、稳定、可控的技术方案。
+            </div>
+        </div>
+    
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-title">核心技术栈</div>
+            <div class="tags">
+            <span class="tag">JavaScript / TypeScript</span>
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">Lit 3</span>
+            <span class="tag">Web Components</span>
+            <span class="tag">Vite / Rollup</span>
+            <span class="tag">MPA / SPA 架构</span>
+            <span class="tag">前端工程化</span>
+            </div>
+        </div>
+    
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">求职期望</div>
+            <div class="section-content">
+            · 前端工程师 / 高级前端工程师<br />
+            · 偏工程化、组件化、平台型项目<br />
+            · 接受远程或混合办公模式<br />
+            · 注重代码质量与长期维护
+            </div>
+        </div>
+    
+        <!-- Footer -->
+        <div class="footer">
+            <div class="location">
+            📍 深圳 / 远程
+            </div>
+            <div class="contact">
+            <a href="https://example.org/" target="_blank">
+                LinkedIn 联系我 →
+            </a>
+            </div>
+        </div>
+
+    </demo-card>
+
+    <h2>marginal + shadowed</h2>
+    <demo-card marginal shadowed>
+        <!-- Header -->
+        <div class="card-header">
+            <img
+            class="avatar"
+            src="/avatars/engineer.jpeg"
+            alt="个人头像"
+            />
+            <div class="header-info">
+            <h2>前端工程师 · Web / Web Components</h2>
+            <p>5 年经验 · 偏工程化 / 架构设计</p>
+            </div>
+        </div>
+    
+        <!-- Profile -->
+        <div class="section">
+            <div class="section-title">个人简介</div>
+            <div class="section-content">
+            专注于现代前端工程体系，长期使用 Vite、Lit、Web Components
+            构建可维护、低耦合的前端架构。对性能、可维护性和长期演进成本高度敏感，
+            偏好简洁、稳定、可控的技术方案。
+            </div>
+        </div>
+    
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-title">核心技术栈</div>
+            <div class="tags">
+            <span class="tag">JavaScript / TypeScript</span>
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">Lit 3</span>
+            <span class="tag">Web Components</span>
+            <span class="tag">Vite / Rollup</span>
+            <span class="tag">MPA / SPA 架构</span>
+            <span class="tag">前端工程化</span>
+            </div>
+        </div>
+    
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">求职期望</div>
+            <div class="section-content">
+            · 前端工程师 / 高级前端工程师<br />
+            · 偏工程化、组件化、平台型项目<br />
+            · 接受远程或混合办公模式<br />
+            · 注重代码质量与长期维护
+            </div>
+        </div>
+    
+        <!-- Footer -->
+        <div class="footer">
+            <div class="location">
+            📍 深圳 / 远程
+            </div>
+            <div class="contact">
+            <a href="https://example.org/" target="_blank">
+                LinkedIn 联系我 →
+            </a>
+            </div>
+        </div>
+
+    </demo-card>
+
+    <h2>bordered + padded + shadowing + inset</h2>
+    <demo-card bordered padded shadowing inset>
+        <!-- Header -->
+        <div class="card-header">
+            <img
+            class="avatar"
+            src="/avatars/engineer.jpeg"
+            alt="个人头像"
+            />
+            <div class="header-info">
+            <h2>前端工程师 · Web / Web Components</h2>
+            <p>5 年经验 · 偏工程化 / 架构设计</p>
+            </div>
+        </div>
+    
+        <!-- Profile -->
+        <div class="section">
+            <div class="section-title">个人简介</div>
+            <div class="section-content">
+            专注于现代前端工程体系，长期使用 Vite、Lit、Web Components
+            构建可维护、低耦合的前端架构。对性能、可维护性和长期演进成本高度敏感，
+            偏好简洁、稳定、可控的技术方案。
+            </div>
+        </div>
+    
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-title">核心技术栈</div>
+            <div class="tags">
+            <span class="tag">JavaScript / TypeScript</span>
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">Lit 3</span>
+            <span class="tag">Web Components</span>
+            <span class="tag">Vite / Rollup</span>
+            <span class="tag">MPA / SPA 架构</span>
+            <span class="tag">前端工程化</span>
+            </div>
+        </div>
+    
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">求职期望</div>
+            <div class="section-content">
+            · 前端工程师 / 高级前端工程师<br />
+            · 偏工程化、组件化、平台型项目<br />
+            · 接受远程或混合办公模式<br />
+            · 注重代码质量与长期维护
+            </div>
+        </div>
+    
+        <!-- Footer -->
+        <div class="footer">
+            <div class="location">
+            📍 深圳 / 远程
+            </div>
+            <div class="contact">
+            <a href="https://example.org/" target="_blank">
+                LinkedIn 联系我 →
+            </a>
+            </div>
+        </div>
+
+    </demo-card>
+
+    <h2>bouncing</h2>
+    <demo-card bouncing>
+        <!-- Header -->
+        <div class="card-header">
+            <img
+            class="avatar"
+            src="/avatars/engineer.jpeg"
+            alt="个人头像"
+            />
+            <div class="header-info">
+            <h2>前端工程师 · Web / Web Components</h2>
+            <p>5 年经验 · 偏工程化 / 架构设计</p>
+            </div>
+        </div>
+    
+        <!-- Profile -->
+        <div class="section">
+            <div class="section-title">个人简介</div>
+            <div class="section-content">
+            专注于现代前端工程体系，长期使用 Vite、Lit、Web Components
+            构建可维护、低耦合的前端架构。对性能、可维护性和长期演进成本高度敏感，
+            偏好简洁、稳定、可控的技术方案。
+            </div>
+        </div>
+    
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-title">核心技术栈</div>
+            <div class="tags">
+            <span class="tag">JavaScript / TypeScript</span>
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">Lit 3</span>
+            <span class="tag">Web Components</span>
+            <span class="tag">Vite / Rollup</span>
+            <span class="tag">MPA / SPA 架构</span>
+            <span class="tag">前端工程化</span>
+            </div>
+        </div>
+    
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">求职期望</div>
+            <div class="section-content">
+            · 前端工程师 / 高级前端工程师<br />
+            · 偏工程化、组件化、平台型项目<br />
+            · 接受远程或混合办公模式<br />
+            · 注重代码质量与长期维护
+            </div>
+        </div>
+    
+        <!-- Footer -->
+        <div class="footer">
+            <div class="location">
+            📍 深圳 / 远程
+            </div>
+            <div class="contact">
+            <a href="https://example.org/" target="_blank">
+                LinkedIn 联系我 →
+            </a>
+            </div>
+        </div>
+
+    </demo-card>
+
+    <h2>rendering</h2>
+    <demo-card rendering>
+        <!-- Header -->
+        <div class="card-header">
+            <img
+            class="avatar"
+            src="/avatars/engineer.jpeg"
+            alt="个人头像"
+            />
+            <div class="header-info">
+            <h2>前端工程师 · Web / Web Components</h2>
+            <p>5 年经验 · 偏工程化 / 架构设计</p>
+            </div>
+        </div>
+    
+        <!-- Profile -->
+        <div class="section">
+            <div class="section-title">个人简介</div>
+            <div class="section-content">
+            专注于现代前端工程体系，长期使用 Vite、Lit、Web Components
+            构建可维护、低耦合的前端架构。对性能、可维护性和长期演进成本高度敏感，
+            偏好简洁、稳定、可控的技术方案。
+            </div>
+        </div>
+    
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-title">核心技术栈</div>
+            <div class="tags">
+            <span class="tag">JavaScript / TypeScript</span>
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">Lit 3</span>
+            <span class="tag">Web Components</span>
+            <span class="tag">Vite / Rollup</span>
+            <span class="tag">MPA / SPA 架构</span>
+            <span class="tag">前端工程化</span>
+            </div>
+        </div>
+    
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">求职期望</div>
+            <div class="section-content">
+            · 前端工程师 / 高级前端工程师<br />
+            · 偏工程化、组件化、平台型项目<br />
+            · 接受远程或混合办公模式<br />
+            · 注重代码质量与长期维护
+            </div>
+        </div>
+    
+        <!-- Footer -->
+        <div class="footer">
+            <div class="location">
+            📍 深圳 / 远程
+            </div>
+            <div class="contact">
+            <a href="https://example.org/" target="_blank">
+                LinkedIn 联系我 →
+            </a>
+            </div>
+        </div>
+
+    </demo-card>
+
+</body>
+
+</html>
