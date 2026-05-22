@@ -9,14 +9,21 @@
         import { DemoLayout } from '../../../../demo-components/dist/demo-components.es.js';
     </script>
     <link rel="stylesheet" href="../../styles/devices.css">
+<!--
     <style>
         demo-layout { height: 200px; width: 200px; }
         div[slot=head] { background-color: #00d2d3; height: 100%; width: 100%; }
         div[slot=body] { background-color: #7e80c1; height: 100%; width: 100%; }
     </style>
+-->
+    <style>
+        demo-layout { background-color: darkseagreen; }
+        div[slot=lt] { background-color: #e4c482; width: 300px; height: 200px; }
+        div[slot=rb] { background-color: darkkhaki; padding: 2em; }
+    </style>
 </head>
 <body>
-
+<!--
     <h2>default</h2>
     <demo-layout>
         <div slot="head"></div>
@@ -30,6 +37,11 @@
         <div slot="body"></div>
     </demo-layout>
     <hr>
-
+-->
+    <div>max-width: 768px</div>
+    <demo-layout>
+        <div slot="lt"></div>
+        <div slot="rb"><button>this is just a button</button></div>
+    </demo-layout>
 </body>
 </html>
