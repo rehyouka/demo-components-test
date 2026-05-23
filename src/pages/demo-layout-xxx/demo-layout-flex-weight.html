@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>demo-layout-flex-weight</title>
+
+    <script type="module">
+        import { DemoLayoutFlexWeight } from '../../../../demo-components/dist/demo-components.es.js';
+    </script>
+    <link rel="stylesheet" href="../../styles/devices.css">
+    <style>
+        demo-layout-flex-weight { height: 200px; width: 200px; }
+        div[slot=lt] { background-color: #00d2d3; height: 100%; width: 100%; }
+        div[slot=rb] { background-color: #7e80c1; height: 100%; width: 100%; }
+    </style>
+</head>
+<body>
+    <h2>default</h2>
+    <demo-layout-flex-weight>
+        <div slot="lt"></div>
+        <div slot="rb"></div>
+    </demo-layout-flex-weight>
+    <hr>
+
+    <h2>weight</h2>
+    <demo-layout-flex-weight w-lt="1" w-rb="2">
+        <div slot="lt"></div>
+        <div slot="rb"></div>
+    </demo-layout-flex-weight>
+    <hr>
+</body>
+</html>

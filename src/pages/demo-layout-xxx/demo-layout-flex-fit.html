@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>demo-layout-flex-fit</title>
+
+    <script type="module">
+        import { DemoLayoutFlexFit } from '../../../../demo-components/dist/demo-components.es.js';
+    </script>
+    <link rel="stylesheet" href="../../styles/devices.css">
+    <style>
+        demo-layout-flex-fit { background-color: darkseagreen; }
+        div[slot=lt] { background-color: #e4c482; width: 300px; height: 200px; }
+        div[slot=rb] { background-color: darkkhaki; padding: 2em; }
+    </style>
+</head>
+<body>
+    <h2>demo-layout-flex-fit</h2>
+    <demo-layout-flex-fit>
+        <div slot="lt"></div>
+        <div slot="rb"><button>this is just a button</button></div>
+    </demo-layout-flex-fit>
+</body>
+</html>
