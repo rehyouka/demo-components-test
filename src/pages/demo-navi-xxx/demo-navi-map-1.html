@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>demo-navi-1</title>
+    <title>demo-navi-map-1</title>
 
     <script type="module">
-        import { DemoIcon } from '../../../../demo-components/dist/demo-components.es.js';
+        import { DemoNaviMap, DemoIcon } from '../../../../demo-components/dist/demo-components.es.js';
     </script>
     <link rel="stylesheet" href="../../styles/devices.css">
     <style>
@@ -20,12 +20,12 @@
             position: absolute;
             bottom: 0;
         }
-        demo-navi {
-            --navi-color-txt-x: rgba(0, 0, 0, 0.6);
-            --navi-color-txt-select-x: rgba(0, 0, 0);
-            --navi-color-txt-title-x: rgb(143, 143, 143);
-            --navi-color-bg-x: rgba(245, 245, 247, 0.6);
-            --navi-width-max: 1500px;
+        demo-navi-map {
+            --navi-map-color-txt-x: rgba(0, 0, 0, 0.6);
+            --navi-map-color-txt-select-x: rgba(0, 0, 0);
+            --navi-map-color-txt-title-x: rgb(143, 143, 143);
+            --navi-map-color-bg-x: rgba(245, 245, 247, 0.6);
+            --navi-map-width-max-x: 1500px;
             --a-color-select-x: black;
         }
         demo-icon[slot=logo] {
@@ -37,14 +37,14 @@
 </head>
 <body>
 
-    <demo-navi config-name="navi">
+    <demo-navi-map config-name="navi-map">
         <demo-icon
                 slot="logo"
                 category="brands"
                 name="demo"
                 filled
         ></demo-icon>
-    </demo-navi>
+    </demo-navi-map>
     <h2>configure via .json file</h2>
 
 </body>

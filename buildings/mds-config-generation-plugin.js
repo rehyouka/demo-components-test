@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { FsNode } from '../../demo-components/src/utils/fs.js';
 
 const PLUGIN_NAME = 'mds-config-generation-plugin';
 
@@ -63,30 +64,15 @@ export function mdsConfigGenerationPlugin() {
 
 function insertNode(container, segments, idx) {
     if (idx === segments.length - 1) {
-        container.push(MdNode.ofFile(segments));
+        container.push(FsNode.ofFile(segments));
         return;
     }
 
     let node = container.find( aNode => aNode.name === segments[idx] );
     if (!node) {
-        node = MdNode.ofDir(segments, idx);
+        node = FsNode.ofDir(segments, idx);
         container.push(node);
     }
 
     insertNode(node.list, segments, idx+1);
-}
-
-class MdNode {
-    constructor(segments, idx, isDir) {
-        this.key = segments.slice(0, idx+1).join('/');
-        this.name = segments[idx];
-        this.isDir = isDir;
-        this.list = isDir ? [] : undefined;
-    }
-    static ofFile(segments) {
-        return new MdNode(segments, segments.length-1, false);
-    }
-    static ofDir(segments, idx) {
-        return new MdNode(segments, idx, true);
-    }
 }

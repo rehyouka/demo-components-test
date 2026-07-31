@@ -1,0 +1,1 @@
+> `Xiling Snow Mountain` in Chengdu is a renowned scenic area and UNESCO World Heritage site famous for its year-round alpine snowscapes, primeval forests, and the poetic legacy of Tang Dynasty poet Du Fu.

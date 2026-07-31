@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>demo-toast-2</title>
+
+    <link rel="stylesheet" href="/assets/demo-components.css">
+    <link rel="stylesheet" href="../../styles/devices.css">
+    <style>
+        *:not(button) {
+            box-sizing: border-box;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="demo_toast_styles">demo_toast_styles</button>
+
+    <script type="module">
+        import { newToast } from '../../../../demo-components/dist/demo-components.es.js';
+        window.onload = le => {
+            document.getElementById('demo_toast_styles').onclick = ce => newToast('demo-toast-styles', { duration: 3000, blurable: true, });
+        };
+    </script>
+
+</body>
+</html>

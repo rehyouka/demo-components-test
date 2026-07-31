@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>demo-bar-1</title>
+
+    <script type="module">
+        import { DemoBar } from '../../../../demo-components/dist/demo-components.es.js';
+    </script>
+    <link rel="stylesheet" href="../../styles/devices.css">
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        demo-bar {
+            bottom: 0;
+            position: fixed;
+
+            --bar-color-bg-x: #f5f5f799;
+            --bar-color-txt-x: #00000099;
+            --bar-color-bg-select-x: #f5f5f7;
+            --bar-color-txt-select-x: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <h2>default</h2>
+    <demo-bar
+        config-name="bar"
+        group-name="dir"
+        @demo-bar-click="e=>console.log('<demo-bar> clicked.}', e)"
+    ></demo-bar>
+</body>
+</html>

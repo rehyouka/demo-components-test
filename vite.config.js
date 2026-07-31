@@ -18,7 +18,7 @@ export default defineConfig({
         },
     },
     plugins: [
-        mdsConfigGenerationPlugin(),
+        // mdsConfigGenerationPlugin(),
         homepageBannerPlugin(),
     ],
 });

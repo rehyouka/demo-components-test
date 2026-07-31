@@ -1,0 +1,1 @@
+> `Grafana` is an open-source observability platform that enables users to visualize, query, and alert on metrics, logs, and traces from diverse data sources.

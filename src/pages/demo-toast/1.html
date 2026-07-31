@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>demo-toast-1</title>
+
+    <link rel="stylesheet" href="../../styles/devices.css">
+    <style>
+        *:not(button) {
+            box-sizing: border-box;
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        demo-toast {
+            font-size: 1.2em;
+            color: red;
+            --toast-container-background-x: yellow;
+        }
+        demo-toast.custom-backdrop {
+            background-color: rgba(149, 149, 149, 0.28);
+        }
+    </style>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <button id="default">default</button>
+    <button id="bottom-right">bottom-right</button>
+    <button id="pausable">pausable</button>
+    <button id="custom_backdrop_styles">custom backdrop styles</button>
+    <button id="blurable">blurable</button>
+
+    <script type="module">
+        import { newToast, hint } from '../../../../demo-components/dist/demo-components.es.js';
+        window.onload = le => {
+            document.getElementById('default').onclick = ce => hint('default hint (top & center)');
+            document.getElementById('bottom-right').onclick = ce => newToast('bottom & right', { position: 'rb', });
+            document.getElementById('pausable').onclick = ce => newToast('pausable', { duration: 3000, pausable: true, });
+            document.getElementById('custom_backdrop_styles').onclick = ce => newToast('custom backdrop styles', { classes: ['custom-backdrop',], duration: 3000, });
+            document.getElementById('blurable').onclick = ce => newToast('blurable', { classes: ['custom-backdrop',], duration: 3000, blurable: true, });
+        };
+    </script>
+
+</body>
+</html>
