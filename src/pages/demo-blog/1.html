@@ -6,11 +6,7 @@
     <title>demo-blog-1</title>
 
     <script type="module">
-        import {
-            DemoImg,
-            DemoMd,
-            DemoA
-        } from '../../../../demo-components/dist/demo-components.es.js';
+        import { DemoBlog } from '../../../../demo-components/dist/demo-components.es.js';
     </script>
     <link rel="stylesheet" href="../../styles/devices.css">
     <style>
@@ -20,64 +16,32 @@
             padding: 0;
             box-sizing: border-box;
         }
+        body {
+            overflow: hidden;
+        }
+        demo-blog {
+            height: 100vh;
+        }
     </style>
     <style>
-        #container {
-            position: relative;
+        @media (prefers-color-scheme: dark) {
+            demo-blog {
+                --blog-tree-color-bkg-x: #2c2c2c;
+                --blog-tree-color-txt-x: #cccccc;
+                --blog-tree-color-bkg-select-x: #686868;
+                --blog-tree-color-txt-select-x: #e1e1e1;
+                --blog-content-color-bkg-x: #0d0d0d;
+                --blog-content-color-txt-x: #545454;
+                --blog-img-color-gradient-x: 27 27 27;
+                --blog-article-color-bkg-x: #1b1b1b;
+                --blog-article-color-txt-x: #afafaf;
+            }
         }
-
-        demo-img {
-            width: 100%;
-        }
-
-        demo-md {
-            padding: 2em;
-        }
-
-        #post-meta {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: .5rem;
-            font-size: 0.8em;
-            color: #cbcbcb;
-            padding: 2em 0;
-        }
-        #post-meta > demo-a {
-            --a-color-deselect-x: #cbcbcb;
-            --a-color-select-x: #959595;
-        }
-        #post-meta > * + *{
-            position: relative;
-        }
-        #post-meta > * + *::before {
-            content: "·";
-            margin-right: .5rem;
-            opacity: .5;
-        }
-
     </style>
 </head>
 <body>
 
-    <div id="host">
-        <div id="container">
-
-            <demo-img src="/imgs/office.png" mode="stretched" gradient></demo-img>
-
-            <demo-md src="Universe/Milky Way/Solar System/The Earth/China/Sichuan/Chengdu/Xiling Snow Mountain"></demo-md>
-
-            <div id="post-meta">
-                <span>2026-06-21</span>
-<!--                <span>·</span>-->
-                <demo-a href="https://example.org/" underline smooth newTab>Author</demo-a>
-<!--                <span>·</span>-->
-                <demo-a href="  " underline smooth newTab>Reposted</demo-a>
-            </div>
-
-
-        </div>
-    </div>
+    <demo-blog config-name-tree="mds" config-name-bar="bar"></demo-blog>
 
 </body>
 </html>
